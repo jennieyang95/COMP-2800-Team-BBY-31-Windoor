@@ -1,7 +1,7 @@
 # COMP-2800-Team-BBY-31-Windoor
  COMP 2800 Projects 2
 
-Team35
+Team31
 Members:
 * Jennie 
 * Jay
@@ -9,7 +9,7 @@ Members:
 * Tyler
 
 ### Links
-### GitHub
+## GitHub
 > https://github.com/jennieyang95/COMP-2800-Team-BBY-31-Windoor
 
 ### File Directory
