@@ -1,5 +1,5 @@
 # COMP-2800-Team-BBY-31-Windoor
- COMP 2800 Projects 2
+Windoor
 
 Team31
 Members:
@@ -7,9 +7,13 @@ Members:
 * Jay
 * Susan
 * Tyler
-
-### Links
-## GitHub
+## Technologies implemented
+* Firebase
+* Bootstrap
+* Basic JavaScript
+* HTML5
+* CSS3
+## Links
+### GitHub
 > https://github.com/jennieyang95/COMP-2800-Team-BBY-31-Windoor
-
-### File Directory
+## File Directory
