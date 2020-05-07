@@ -6,14 +6,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Index</title>
+    <title>Origami - Adults Zone </title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css">``````````````````````````
   </head>
 
   <body id="page-top">
@@ -28,6 +28,18 @@
           <ul class="navbar-nav ml-auto">
             <li>
                 <a class="nav-link js-scroll-trigger" href="index.html"> My Account </a>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#contact">Contact us</a>
+                  </li>
+                  <li>
+                    <a class="nav-link js-scroll-trigger" href="signup.html"> Sign Up </a>
+                  </li>
             </li>
           </ul>
         </div>
@@ -43,7 +55,41 @@
 <div style="text-align: center;">
     
     <br><br><br><br><br><br>
-    <h1>Contents go in here</h1>
+    <h1>Choose your pick!
+
+        <div class="container py-3">
+            <!--Row with two equal columns-->
+            <div class="row">
+                <div class="col-md-3">
+                    <a href = "jayinstruction.html"><img src="image/crane.jpg" class="rounded-circle img-fluid"></a>                    
+                    Paper Crane
+                </div>
+    
+                <div class="col-md-6">
+                  <a href = "jayinstruction.html"><img src="image/elephant.jpg" class="rounded-circle img-fluid"></a>
+                    Elephant
+                </div>
+    
+            </div>
+        </div>
+    
+        <div class="container">
+            <!--Row with two equal columns-->
+            <div class="row py-3">
+                <div class="col-md-5">
+                  <a href = "jayinstruction.html"><img src="image/rose.jpg" class="rounded-circle img-fluid"></a>
+                    Rose
+                </div>
+    
+                <div class="col-md-7">
+                  <a href = "jayinstruction.html"><img src="image/dragon.jpg" class="rounded-circle img-fluid"></a>
+                    Dragon
+                </div>
+    
+            </div>
+        </div>
+    
+    </h1>
     <br><br><br><br>
 </div>
 
@@ -69,15 +115,6 @@
 
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
-
-    <script src="js/login.js"></script>
-    <script>
-        firebase.auth().onAuthStateChanges(function(user) {
-            if (user) {
-                windows.location.href = "index.html"
-            } 
-        });
-    </script>
 
   </body>
 

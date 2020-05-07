@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Index</title>
+    <title>Paper Animals - Kids Zone</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,6 +28,18 @@
           <ul class="navbar-nav ml-auto">
             <li>
                 <a class="nav-link js-scroll-trigger" href="index.html"> My Account </a>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#contact">Contact us</a>
+                  </li>
+                  <li>
+                    <a class="nav-link js-scroll-trigger" href="signup.html"> Sign Up </a>
+                  </li>
             </li>
           </ul>
         </div>
@@ -43,7 +55,41 @@
 <div style="text-align: center;">
     
     <br><br><br><br><br><br>
-    <h1>Contents go in here</h1>
+    <h1>Choose your pick!
+
+        <div class="container py-3">
+            <!--Row with two equal columns-->
+            <div class="row">
+                <div class="col-md-5">
+                    <a href = "jayinstruction.html"><img src="image/puppy.jpg" class="rounded-circle img-fluid"></a>
+                    Puppy!
+                </div>
+    
+                <div class="col-md-7">
+                    <a href = "jayinstruction.html"><img src="image/fishy.jpg" class="rounded-circle img-fluid"></a>
+                    Fishy!
+                </div>
+    
+            </div>
+        </div>
+    
+        <div class="container">
+            <!--Row with two equal columns-->
+            <div class="row py-2">
+                <div class="col-md-4">
+                    <a href = "jayinstruction.html"><img src="image/kitten.jpg" class="rounded-circle img-fluid"></a>
+                    Kitty!
+                </div>
+    
+                <div class="col-md-7">
+                    <a href = "jayinstruction.html"><img src="image/whale.jpg" class="rounded-circle img-fluid"></a>
+                    Whale!
+                </div>
+    
+            </div>
+        </div>
+    
+    </h1>
     <br><br><br><br>
 </div>
 
@@ -69,15 +115,6 @@
 
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
-
-    <script src="js/login.js"></script>
-    <script>
-        firebase.auth().onAuthStateChanges(function(user) {
-            if (user) {
-                windows.location.href = "index.html"
-            } 
-        });
-    </script>
 
   </body>
 
