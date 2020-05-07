@@ -14,6 +14,7 @@
     <!-- Custom styles for this template -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/levelSelection.css">
   </head>
 
   <body id="page-top">
@@ -43,8 +44,23 @@
 <div style="text-align: center;">
     
     <br><br><br><br><br><br>
-    <h1>Contents go in here</h1>
+    <h1>Muscle Level</h1>
     <br><br><br><br>
+    
+    <div class="options-container">
+      <div id="option1img"><img src="/image/dummy1.png"></div>
+      <div id="option1"><p>Arms</p></div>
+      
+      <div id="option2img"><img src="/image/dummy1.png"></div>
+      <div id="option2"><p>Legs</p></div>
+
+      <div id="option3img"><img src="/image/dummy1.png"></div>
+      <div id="option3"><p>Abs</p></div>
+
+    </div>
+
+
+    <br><br><br><br> 
 </div>
 
 
@@ -69,15 +85,6 @@
 
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
-
-    <script src="js/login.js"></script>
-    <script>
-        firebase.auth().onAuthStateChanges(function(user) {
-            if (user) {
-                windows.location.href = "index.html"
-            } 
-        });
-    </script>
 
   </body>
 

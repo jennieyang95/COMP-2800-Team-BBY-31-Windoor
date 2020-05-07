@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Index</title>
+    <title>Yoga Level</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -14,6 +14,7 @@
     <!-- Custom styles for this template -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/levelSelection.css">
   </head>
 
   <body id="page-top">
@@ -43,7 +44,22 @@
 <div style="text-align: center;">
     
     <br><br><br><br><br><br>
-    <h1>Contents go in here</h1>
+    <h1>Yoga Level</h1>
+    <br><br><br><br>
+
+    <div class="options-container">
+      <div id="option1img"><a href="yoga1.html"><img src="/image/dummy1.png"></a></div>
+      <div id="option1"><a href="yoga1.html">10 minutes</a></div>
+      
+      <div id="option2img"><a href="yoga2.html"><img src="/image/dummy1.png"></a></div>
+      <div id="option2"><a href="yoga2.html">20 minutes</a></div>
+
+      <div id="option3img"><a href="yoga3.html"><img src="/image/dummy1.png"></a></div>
+      <div id="option3"><a href="">30 minutes</a></div>
+
+    </div>
+
+
     <br><br><br><br>
 </div>
 
@@ -69,15 +85,6 @@
 
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
-
-    <script src="js/login.js"></script>
-    <script>
-        firebase.auth().onAuthStateChanges(function(user) {
-            if (user) {
-                windows.location.href = "index.html"
-            } 
-        });
-    </script>
 
   </body>
 
