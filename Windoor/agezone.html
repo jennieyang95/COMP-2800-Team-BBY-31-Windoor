@@ -1,0 +1,205 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+
+  
+   
+ <!------------------------------------------------------------------------------------>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+  
+  
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+  <!------------------------------------------------------------------------------>
+    <style>
+
+body {
+
+  background-color: white
+
+}
+
+.wrapper {
+    display: grid;
+padding: 0;
+    grid-template-areas:
+        "navbar navbar navbar"
+        "header header header"
+        "article article article"
+        "article article article"
+        "footer footer footer";
+
+}
+
+.main-header {
+
+display: grid;
+grid-area: header;
+
+}
+
+.main-nav {
+
+    
+            
+            grid-area: navbar;
+            
+           
+           
+
+}
+
+.main-article {
+
+    display: grid;
+    padding: 50;
+    grid-area: article;
+    grid-template-areas:
+    "adultzone"
+    "kidzone"
+    ;
+
+
+   
+
+}
+
+
+
+.main-article > .adultzone {
+    grid-area: adultzone;
+    border-style: outset;
+    padding: 30;
+}
+
+.main-article > .kidzone {
+    grid-area: kidzone;
+    border-style: outset;
+    padding: 30;
+}
+
+.adultzone > .adultzonetxt {
+
+    color: black;
+}
+
+.adultzone > .adultimg {
+
+color: blue;
+float: right;
+}
+
+.kidzone > .kidzonetxt {
+
+    color: blue;
+}
+
+.kidzone > .kidimg {
+
+color: blue;
+float: right;
+}
+
+.leftarrow {
+
+  width: 70;
+  height: 70;
+
+}
+
+
+
+
+        </style>
+
+</head>
+
+
+<body>
+
+<div class="wrapper">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark  main-nav" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="#page-top"> Windoor </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#about">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#contact">Contact us</a>
+              </li>
+              <li>
+                <a class="nav-link js-scroll-trigger" href="signup.html"> Sign Up </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+    <header class="main-header"> 
+        
+       <h2> <br> Select your age group </h1> 
+    
+    </header>
+
+
+
+
+<article class="main-article">
+
+    <div class="adultzone">
+        <h2 class="adultzonetxt"> adults zone </h2>
+        <img src="#adult.jpg" class="adultimg">
+        
+
+    </div>
+
+<div class="kidzone">
+    <h2 class="kidszonetxt"> kids zone </h2>
+    <img src="kid.jpg" class="kidimg">
+
+</div>
+
+</article>
+
+  
+<footer class="main-footer">
+
+<img src="image/leftarrow.jpeg" class="leftarrow">
+
+
+</footer>
+      
+
+
+
+
+
+    </div>
+</body>
+</html>
