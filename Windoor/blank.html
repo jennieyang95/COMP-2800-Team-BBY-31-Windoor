@@ -70,6 +70,15 @@
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
 
+    <script src="js/login.js"></script>
+    <script>
+        firebase.auth().onAuthStateChanges(function(user) {
+            if (user) {
+                windows.location.href = "index.html"
+            } 
+        });
+    </script>
+
   </body>
 
 </html>
