@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+   
+    <meta charset="utf-8">
+    <title>My BCIT Project</title>
+    <meta name="comp1800 boilerplate code" content="my bcit project">
+    <meta name="author" content="BCIT">
+
+    <!----------------------------------------------->
+    <!--  Meta tag for rendering on mobile devices -->
+    <!----------------------------------------------->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!----------------------------------------------->
+    <!-- CSS: Bootstrap, Firebase, other API -->
+    <!----------------------------------------------->
+    
+   
+
+    <!------------------------>
+    <!-- Your own CSS files -->
+    <!------------------------>
+
+
+</head>
+
+<body>
+    <!----------------------->
+    <!--  HTML Section -->
+    <!----------------------->
+
+
+
+    <div class="video-container">
+      <iframe id = "video" width="100%" height="100%" 
+    src="https://www.youtube.com/embed/8XkcbdSRdO0"
+      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen></iframe>
+      <br><br>
+  </div>
+
+
+ <p id="description"> </p> 
+    
+
+   
+
+    <!----------------------------------------------->
+    <!-- JS: Boostrap, Firebase, API related    -->
+    <!----------------------------------------------->
+
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+    <script src="js/javasc.js"> </script>
+
+    <!--------------------------------------------------------------------->
+    <!-- JS files: Your own JavaScript functions included here    -->
+    <!--------------------------------------------------------------------->
+   
+
+    <!--------------------------------------------------------------------->
+    <!-- Make calls to your own JavaScript functions, here below-->
+    <!---------------------------------------------------------------------->
+
+
+
+
+   <script>
+
+var videndes = {};
+
+       function getuserchoice() {
+            db.collection("useractselc").doc("catenact").onSnapshot(
+                function (snap) {
+                   //do something
+                   let usercate = snap.data().category;
+                   let useracti = snap.data().activities;
+                   console.log(useracti);
+                pullvidndes(usercate, useracti)
+
+               })}
+
+       getuserchoice();
+
+      
+       function pullvidndes(a,b) {
+
+        let activideo = b + "v";
+        let actidescrp = b + "d";
+
+            db.collection("instruction").doc(a).onSnapshot(
+                function (snap) {
+                   //do something
+                   let activid = snap.data()[activideo];
+                   let actidescr = snap.data()[actidescrp];
+                   console.log(activid);
+                  
+                   document.getElementById("video").src = activid;
+                   document.getElementById("description").innerHTML = actidescr;
+
+               })}
+
+       getuserchoice();
+
+  
+      
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
