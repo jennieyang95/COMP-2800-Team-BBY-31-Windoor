@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <!-- favicon for Windoor -->
+    <link rel="shortcut icon" type="image/png" href="image/favicon.png">
 
     <title>Index</title>
 
@@ -53,7 +55,7 @@
         </button>
       </div>
     </nav>
-
+    <br><br><br>
         <!-- The surrounding HTML is left untouched by FirebaseUI.
      Your app may use that space for branding, controls and other customizations.-->
      <div id="firebaseui-auth-container"></div>  
@@ -79,7 +81,7 @@
                 },
                 // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
                 signInFlow: 'popup',
-                signInSuccessUrl: 'index.html',
+                signInSuccessUrl: 'agezone.html',
                 signInOptions: [
                   // Leave the lines as is for the providers you want to offer your users.
                 //   firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -98,7 +100,7 @@
                 ui.start('#firebaseui-auth-container', uiConfig);
      </script>
 
-
+     <br>
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
