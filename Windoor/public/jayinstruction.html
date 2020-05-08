@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+   
+    <meta charset="utf-8">
+    <title>Instruction page</title>
+    
+ 
+    <!----------------------------------------------->
+    <!--  Meta tag for rendering on mobile devices -->
+    <!----------------------------------------------->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!----------------------------------------------->
+    <!-- CSS: Bootstrap, Firebase, other API -->
+    <!----------------------------------------------->
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   
+
+    <!------------------------>
+    <!-- Your own CSS files -->
+    <!------------------------>
+<!-- Custom styles for this template -->
+<link href="css/scrolling-nav.css" rel="stylesheet">
+<link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+    <!----------------------->
+    <!--  HTML Section -->
+    <!----------------------->
+
+       <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="index.html"> Windoor </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li>
+                <a class="nav-link js-scroll-trigger" href="index.html"> My Account </a>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#contact">Contact us</a>
+                  </li>
+                  <li>
+                    <a class="nav-link js-scroll-trigger" href="signup.html"> Sign Up </a>
+                  </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+
+    <div class="video-container">
+      <iframe id = "video" width="300px" height="300px" style="display: block; margin-left: auto; margin-right: auto; width: 50%;" 
+    src="https://www.youtube.com/embed/8XkcbdSRdO0"
+      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen></iframe>
+      <br><br>
+  </div>
+
+<div style="text-align: center;"> 
+ <p id="description" style="display: block; margin-left: auto; margin-right: auto; width: 80%;"> </p> 
+</div>
+
+  <!-- Footer -->
+  <footer class="py-1 bg-dark fixed-bottom">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Windoor</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+
+
+
+
+ 
+  
+
+ 
+   
+
+    <!----------------------------------------------->
+    <!-- JS: Boostrap, Firebase, API related    -->
+    <!----------------------------------------------->
+
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+    <script src="js/javasc.js"> </script>
+
+     <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+
+    <!--------------------------------------------------------------------->
+    <!-- JS files: Your own JavaScript functions included here    -->
+    <!--------------------------------------------------------------------->
+  
+
+    <!--------------------------------------------------------------------->
+    <!-- Make calls to your own JavaScript functions, here below-->
+    <!---------------------------------------------------------------------->
+
+
+
+
+   <script>
+
+var videndes = {};
+
+       function getuserchoice() {
+            db.collection("useractselc").doc("catenact").onSnapshot(
+                function (snap) {
+                   //do something
+                   let usercate = snap.data().category;
+                   let useracti = snap.data().activities;
+                   console.log(useracti);
+                pullvidndes(usercate, useracti)
+
+               })}
+
+       getuserchoice();
+
+      
+       function pullvidndes(a,b) {
+
+        let activideo = b + "v";
+        let actidescrp = b + "d";
+
+            db.collection("instruction").doc(a).onSnapshot(
+                function (snap) {
+                   //do something
+                   let activid = snap.data()[activideo];
+                   let actidescr = snap.data()[actidescrp];
+                   console.log(activid);
+                  
+                   document.getElementById("video").src = activid;
+                   document.getElementById("description").innerHTML = actidescr;
+
+               })}
+
+       getuserchoice();
+
+  
+      
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
