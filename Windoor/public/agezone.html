@@ -1,0 +1,212 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+  <!-- favicon for Windoor -->
+  <link rel="shortcut icon" type="image/png" href="image/favicon.png">
+
+  
+   
+ <!------------------------------------------------------------------------------------>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+  
+  
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+  <!------------------------------------------------------------------------------>
+    <style>
+      body {
+        background-color: white
+      }
+      .wrapper {
+        display: grid;
+        padding: 0;
+            grid-template-areas:
+                "navbar navbar navbar"
+                "header header header"
+                "article article article"
+                "article article article"
+                "footer footer footer"
+            ;
+      }
+      .main-header {
+        display: grid;
+        grid-area: header;
+        justify-content: center;
+      }
+      .main-nav {
+        grid-area: navbar;
+      }
+      .main-article {
+        display: grid;
+        padding: 50;
+        grid-area: article;
+        grid-template-areas:
+        "adultzone"
+        "kidzone"
+        ;
+      }
+      .main-article > .adultzone {
+        grid-area: adultzone;
+        border-style: outset;
+        padding: 15;
+      }
+      .main-article > .kidzone {
+        grid-area: kidzone;
+        border-style: outset;
+        padding: 15;
+      }
+
+      .adultzone > .adultzonetxt {
+        color: black;
+      }
+
+      .adultzone > .adultimg {
+        color: blue;
+        float: right;
+        width: 60;
+        height: 50;
+      }
+      .kidzone > .kidzonetxt {
+        color: blue;
+      }
+      .kidimg {
+        color: blue;
+        float: right;
+        width: 60;
+        height: 50;
+      }
+      .leftarrow {
+        width: 70;
+        height: 50;
+      }
+
+      .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.containerRow {
+  content: "";
+  clear: both;
+  display: table;
+}
+.containerCol {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+
+
+
+
+.box{
+  width: 10px;
+  height: 10px;
+  
+  cursor: pointer;
+  
+}
+
+.text:hover, .box:hover{
+  animation: bounce 1s linear;
+}
+
+@keyframes bounce{
+  20%, 50%, 80%, to{
+      transform: translateY(0);
+  }
+  40%{
+      transform: translateY(-30px);
+  }
+  70%{
+      transform: translateY(-15px);
+  }
+  90%{
+      transform: translateY(-4px);
+  }
+}
+  </style>
+
+</head>
+
+
+<body>
+
+<div class="wrapper">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark  main-nav" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="#page-top"> Windoor </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#about">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#contact">Contact us</a>
+              </li>
+              <li>
+                <a class="nav-link js-scroll-trigger" href="signup.html"> Sign Up </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <header class="main-header"> 
+       <h2> <br> Select your age group </h1> 
+    </header>
+
+  <article class="main-article">
+    <a href="selectionAdults.html"> <div class="adultzone">
+          <h2 class="adultzonetxt"> adults zone </h2> </a>
+          <img src="image/adultimg.png" class="adultimg"> 
+    </div>
+
+
+    <a href="selectionKids.html"> <div class="kidzone">
+          <h2 class="kidszonetxt"> kids zone </h2>
+          <img src="image/kidimg.png" class="kidimg"> </a>
+    </div>
+  </article>
+
+  <a href="index.html"> <img src="image/leftarrow.png" class="leftarrow"> </a>
+
+  <!-- Footer -->
+  <footer class="py-1 bg-dark fixed-bottom">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Windoor</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+      
+</div>
+
+<div class="box">
+  <img src="image/easteregg.png">
+</div>
+</body>
+</html>

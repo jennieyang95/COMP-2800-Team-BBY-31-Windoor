@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- favicon for Windoor -->
+    <link rel="shortcut icon" type="image/png" href="image/favicon.png">
+
+    <title>Anaerobic - Adults</title>
+    <script type='text/javascript' src='https://code.jquery.com/jquery-3.5.0.min.js'></script>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+
+    <!-- Custom styles for this template -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+
+<!--------- fire base -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+    <script src="js/javasc.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+<!--------- fire base -->
+  </head>
+
+
+
+    
+     
+ 
+  <body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="index.html"> Windoor </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li>
+                <a class="nav-link js-scroll-trigger" href="index.html"> My Account </a>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#contact">Contact us</a>
+                  </li>
+                  <li>
+                    <a class="nav-link js-scroll-trigger" href="signup.html"> Sign Up </a>
+                  </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- FUNCTIONALITY IN HERE  -->
+<div style="text-align: center;">
+    
+    <br><br><br><br><br><br>
+    <h1 id="name">What would you like to improve on, ___? </h1>
+
+        <div class="container py-3">
+            <!--Row with two equal columns-->
+            <div class="row">
+                <div class="col-md-5">
+                  <input type="image" id= "abdomen" value="aerobic" src="image/abdomen.jpg" onclick="selactivity(this.id);" class="instr rounded-circle img-fluid abdomen"></a>
+                    Abdomen
+                </div>
+    
+                <div class="col-md-4">
+                  <input type="image" id= "thighs" value="aerobic" src="image/thighs.png" onclick="selactivity(this.id)" class="instr thighs rounded-circle img-fluid thighs"></a>
+                    Thighs
+                </div>
+    
+            </div>
+        </div>
+    
+        <div class="container">
+            <!--Row with two equal columns-->
+            <div class="row py-2">
+                <div class="col-md-4">
+                    <input type="image" id= "arms" value="aerobic" src="image/arms.jpg" onclick="selactivity(this.id)"  class="instr arms rounded-circle img-fluid"></a>
+                    Arms
+                </div>
+    
+                <div class="col-md-7">
+                   <input type="image" id= "chest" value="aerobic" src="image/chest.jpg" onclick="selactivity(this.id)"  class="instr chest rounded-circle img-fluid"></a>
+                    Chest
+                </div>
+    
+              
+    
+            </div>
+        </div>
+    
+      
+      <br><br><br><br>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Windoor</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+    <script type="text/javascript">
+    
+
+
+    function selactivity(clicked_id) {
+           
+
+ 
+
+           let selcatego = document.getElementById(clicked_id).value;   //gets user input
+           let selecteac = document.getElementById(clicked_id).id;
+           console.log(selcatego);
+           console.log(selecteac);
+           db.collection("useractselc").doc("catenact").set({
+               category: selcatego,
+               activities: selecteac
+           })
+          
+  
+       }
+
+
+
+   
+    addEventListener("load",function(){
+      
+      var link = document.getElementsByClassName("instr");
+      for (i = 0; i < 4; i++) {
+      link[i].addEventListener("click",function(e){
+          e.preventDefault();
+          // do some database stuff
+          // after 5 seconds, trigger the link
+          setTimeout(function(){ 
+            window.location.href = "jayinstruction.html"; }, 500);
+          }) 
+  }}); 
+
+
+      </script>
+
+<script>
+firebase.auth().onAuthStateChanged(function (user) {
+  if (user) {
+    document.getElementById("name").innerHTML = "What would you like to improve on " + user.displayName + "?"
+      console.log(user.displayName)
+  } else {
+      // No user is signed in.
+  }
+});
+</script>
+
+<div class="box">
+  <img src="image/easteregg.png">
+</div>
+
+  </body>
+
+</html>

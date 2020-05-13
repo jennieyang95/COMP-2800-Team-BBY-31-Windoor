@@ -1,0 +1,65 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.containerRow {
+  content: "";
+  clear: both;
+  display: table;
+}
+.containerCol {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.containerRow {
+content: "";
+clear: both;
+display: table;
+}
+.containerCol {
+float: left;
+width: 25%;
+padding: 5px;
+}
+
+
+
+
+.box{
+width: 10px;
+height: 10px;
+
+cursor: pointer;
+
+}
+
+.text:hover, .box:hover{
+animation: bounce 1s linear;
+}
+
+@keyframes bounce{
+20%, 50%, 80%, to{
+    transform: translateY(0);
+}
+40%{
+    transform: translateY(-30px);
+}
+70%{
+    transform: translateY(-15px);
+}
+90%{
+    transform: translateY(-4px);
+}
+}

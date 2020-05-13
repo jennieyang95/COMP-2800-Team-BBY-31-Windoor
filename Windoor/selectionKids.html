@@ -116,6 +116,23 @@
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
 
+<<<<<<< Updated upstream:Windoor/selectionKids.html
+=======
+<script>
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        document.getElementById("name").innerHTML = "What would you want to do today " + user.displayName + "?"
+          console.log(user.displayName)
+      } else {
+          // No user is signed in.
+      }
+    });
+  </script>
+
+<div class="box">
+  <img src="image/easteregg.png">
+</div>
+>>>>>>> Stashed changes:Windoor/public/selectionKids.html
   </body>
 
 </html>

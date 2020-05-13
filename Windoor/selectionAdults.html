@@ -116,6 +116,26 @@
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
 
+<<<<<<< Updated upstream:Windoor/selectionAdults.html
+=======
+<script>
+
+firebase.auth().onAuthStateChanged(function (user) {
+  if (user) {
+    document.getElementById("name").innerHTML = "What are you in the mood for " + user.displayName + "?"
+      console.log(user.displayName)
+  } else {
+      // No user is signed in.
+  }
+});
+
+</script>
+
+
+<div class="box">
+  <img src="image/easteregg.png">
+</div>
+>>>>>>> Stashed changes:Windoor/public/selectionAdults.html
   </body>
 
 </html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- favicon for Windoor -->
+    <link rel="shortcut icon" type="image/png" href="image/favicon.png">
+
+    <title>Index</title>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
+      <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script>
+          // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCw7d1WGvyygchOfHN731FqQfwHUBLtidM",
+        authDomain: "projects-2-88388.firebaseapp.com",
+        databaseURL: "https://projects-2-88388.firebaseio.com",
+        projectId: "projects-2-88388",
+        storageBucket: "projects-2-88388.appspot.com",
+        messagingSenderId: "1055517014926",
+        appId: "1:1055517014926:web:0d36594b9cc92cd51f02df"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"> Windoor </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <br><br><br>
+        <!-- The surrounding HTML is left untouched by FirebaseUI.
+     Your app may use that space for branding, controls and other customizations.-->
+     <div id="firebaseui-auth-container"></div>  
+     <div id="loader"></div>
+ 
+
+     <script>
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+            var uiConfig = {
+                callbacks: {
+                  signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+                    // User successfully signed in.
+                    // Return type determines whether we continue the redirect automatically
+                    // or whether we leave that to developer to handle.
+                    return true;
+                  },
+                  uiShown: function() {
+                    // The widget is rendered.
+                    // Hide the loader.
+                    document.getElementById('loader').style.display = 'none';
+                  }
+                },
+                // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+                signInFlow: 'popup',
+                signInSuccessUrl: 'agezone.html',
+                signInOptions: [
+                  // Leave the lines as is for the providers you want to offer your users.
+                //   firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                //   firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+                //   firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+                //   firebase.auth.GithubAuthProvider.PROVIDER_ID,
+                  firebase.auth.EmailAuthProvider.PROVIDER_ID,
+                //   firebase.auth.PhoneAuthProvider.PROVIDER_ID
+                ],
+                // Terms of service url.
+                tosUrl: 'index.html',
+                // Privacy policy url.
+                privacyPolicyUrl: 'index.html'
+              };
+              // The start method will wait until the DOM is loaded.
+                ui.start('#firebaseui-auth-container', uiConfig);
+     </script>
+
+     <br>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Windoor</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+    
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+    <!-- <script src="js/createuser.js"></script>
+    <script>
+        createUser();
+    </script> -->
+
+
+    <div class="box">
+      <img src="image/easteregg.png">
+    </div>
+  </body>
+
+</html>
+
+
+
+
