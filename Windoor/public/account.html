@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Windoor</title>
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+  <!-- favicon for Windoor -->
+  <link rel="shortcut icon" type="image/png" href="image/favicon.png">
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCw7d1WGvyygchOfHN731FqQfwHUBLtidM",
+      authDomain: "projects-2-88388.firebaseapp.com",
+      databaseURL: "https://projects-2-88388.firebaseio.com",
+      projectId: "projects-2-88388",
+      storageBucket: "projects-2-88388.appspot.com",
+      messagingSenderId: "1055517014926",
+      appId: "1:1055517014926:web:0d36594b9cc92cd51f02df"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body id="page-top">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"> Windoor </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact us</a>
+          </li>
+          <li>
+            <a class="nav-link js-scroll-trigger" href="signin.html"> Sign Out </a> <!-- Signout page or something to signal the user that he/she has signed out -->
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white">
+    <div class="container text-center">
+      <h1> Your Account </h1>
+      <p class="lead"> 
+          Easy to view your account & enhances your experiences with Windoor
+      </p>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <p class="lead">
+              <!-- Stuff goes in here -->
+
+              <div class="card border-primary mb-3" style="max-width: 20rem;">
+                <div class="card-header">Profile</div>
+                <div class="card-body text-primary">
+                  <h5 class="card-title"> Username </h5>
+                  <p class="card-text" id="username">_________________________________________</p>
+                  <h5 class="card-title"> Email </h5>
+                  <p class="card-text" id="email">_________________________________________</p>
+                  <h5 class="card-title"> Score </h5>
+                  <p class="card-text" id="score">_________________________________________</p>
+                </div>
+              </div>
+              
+
+              <!-- <div class="card-columns">
+  <div class="card mt-2 mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Panel title that wraps to a new line</h5>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+  </div>
+  <div class="card p-3 mb-3">
+    <blockquote class="blockquote mb-0 card-body">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer class="blockquote-footer">
+        <small class="text-muted">
+          Someone famous in <cite title="Source Title">Source Title</cite>
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Panel title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card blue lighten-2 text-white text-center p-3 mt-2 mb-3">
+    <blockquote class="blockquote mb-0">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+      <footer class="blockquote-footer">
+        <small>
+          Someone famous in <cite title="Source Title">Source Title</cite>
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+  <div class="card text-center mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Panel title</h5>
+      <p class="card-text">This card has a regular title and short paragraph of text below it.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Panel title that wraps to a new line</h5>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+  </div>
+  <div class="card p-3 text-right mt-2 mb-3">
+    <blockquote class="blockquote mb-0">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer class="blockquote-footer">
+        <small class="text-muted">
+          Someone famous in <cite title="Source Title">Source Title</cite>
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Panel title</h5>
+      <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card text-center mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Panel title</h5>
+      <p class="card-text">This card has a regular title and short paragraph of text below it.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div> -->
+
+
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="bg-light">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+
+          <div class="containerRow">
+            <div class="containerCol">
+              <img src="image/tyler.png" style="width: 100%">
+            </div>
+            <div class="containerCol">
+              <img src="image/susan.png" style="width: 100%">
+            </div>
+            <div class="containerCol">
+              <img src="image/jennie.png" style="width: 100%">
+            </div>
+            <div class="containerCol">
+              <img src="image/JungJae.png" style="width: 100%">
+            </div>
+          </div> 
+          <h2>About Us</h2>
+          <p class="lead">
+            We are a group of 4 developers consisting of two Term 1 and two Term 2 students who are collaborating to
+            improve the wellbeing of our community during COVID-19. Jennie and JungJae have completed Term 1 and they’re
+            excited to put their knowledge to use. They welcome hands-on projects because it’s a great way to challenge
+            themselves and meet other developers. Tyler and Susan have finished Term 2 and they look forward to working
+            alongside a hardworking and passionate team. Collaborating is what gets us going! We hope our app, Windoor,
+            encourages safe social distancing while taking care of our mental and physical health.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Contact us</h2>
+          <p class="lead">
+            If you have any questions or concerns, please feel free to contact us at windoor@xyz.com
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Windoor</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+  <script src="js/score.js"></script>
+  <script>
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+            document.getElementById("username").innerHTML = "" + user.displayName
+            document.getElementById("email").innerHTML = user.email
+            document.getElementByID("score").innerHTML = user.score
+            console.log(user.score)
+            console.log(user.displayName)
+            console.log(user.email)
+        } else {
+            // No user is signed in.
+        }
+    });
+  </script>
+</body>
+
+</html>
