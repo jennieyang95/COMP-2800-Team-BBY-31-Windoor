@@ -16,6 +16,13 @@
     <!-- Custom styles for this template -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+
+      <!--------- fire base -->
+      <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+      <script src="js/javasc.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+  <!--------- fire base -->
   </head>
 
   <body id="page-top">
@@ -65,37 +72,39 @@
     <br><br><br><br><br><br>
     <h1>Choose your pick!
 
-        <div class="container py-3">
-            <!--Row with two equal columns-->
-            <div class="row">
-                <div class="col-md-5">
-                    <a href = "jayinstruction.html"><img src="image/puppy.jpg" class="rounded-circle img-fluid"></a>
-                    Puppy!
-                </div>
-    
-                <div class="col-md-7">
-                    <a href = "jayinstruction.html"><img src="image/fishy.jpg" class="rounded-circle img-fluid"></a>
-                    Fishy!
-                </div>
-    
+      <div class="container py-3">
+        <!--Row with two equal columns-->
+        <div class="row">
+            <div class="col-md-5">
+              <input type="image" id= "puppy" value="origamikids" src="image/puppy.jpg" onclick="selactivity(this.id);" class="instr puppy rounded-circle img-fluid"></a>
+               Puppy
             </div>
-        </div>
-    
-        <div class="container">
-            <!--Row with two equal columns-->
-            <div class="row py-2">
-                <div class="col-md-4">
-                    <a href = "jayinstruction.html"><img src="image/kitten.jpg" class="rounded-circle img-fluid"></a>
-                    Kitty!
-                </div>
-    
-                <div class="col-md-7">
-                    <a href = "jayinstruction.html"><img src="image/whale.jpg" class="rounded-circle img-fluid"></a>
-                    Whale!
-                </div>
-    
+
+            <div class="col-md-4">
+              <input type="image" id= "fishy" value="origamikids" src="image/fishy.jpg" onclick="selactivity(this.id)" class="instr fishy rounded-circle img-fluid"></a>
+                Fishy
             </div>
+
         </div>
+    </div>
+
+    <div class="container">
+        <!--Row with two equal columns-->
+        <div class="row py-2">
+          <div class="col-md-4">
+            <input type="image" id= "kitty" value="origamikids" src="image/kitten.jpg" onclick="selactivity(this.id)" class="instr kitty rounded-circle img-fluid"></a>
+              Kitty
+          </div>
+
+          <div class="col-md-4">
+            <input type="image" id= "whale" value="origamikids" src="image/whale.jpg" onclick="selactivity(this.id)" class="instr whale rounded-circle img-fluid"></a>
+              Whale
+          </div>
+
+          
+
+        </div>
+    </div>
     
     </h1>
     <br><br><br><br>
@@ -124,6 +133,55 @@
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
 
-  </body>
+    <script type="text/javascript">
 
-</html>
+      function selactivity(clicked_id) {
+             
+  
+   
+  
+        let selcatego = document.getElementById(clicked_id).value;   //gets user input
+        let selecteac = document.getElementById(clicked_id).id;
+        console.log(selcatego);
+        console.log(selecteac);
+        db.collection("useractselc").doc("catenact").set({
+            category: selcatego,
+            activities: selecteac
+        })
+       
+  
+    }
+  
+  
+  
+  
+  addEventListener("load",function(){
+   
+   var link = document.getElementsByClassName("instr");
+   for (i = 0; i < 4; i++) {
+   link[i].addEventListener("click",function(e){
+       e.preventDefault();
+       // do some database stuff
+       // after 5 seconds, trigger the link
+       setTimeout(function(){ 
+         window.location.href = "instructionpage.html"; }, 500);
+       }) 
+  }}); 
+  
+  
+   </script>
+  
+  <script>
+  firebase.auth().onAuthStateChanged(function (user) {
+  if (user) {
+  document.getElementById("name").innerHTML = "What are you in the mood for today, " + user.displayName + "?"
+   console.log(user.displayName)
+  } else {
+   // No user is signed in.
+  }
+  });
+  </script>
+  
+    </body>
+  
+  </html>
