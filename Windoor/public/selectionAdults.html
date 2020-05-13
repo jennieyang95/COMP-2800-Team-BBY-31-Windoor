@@ -16,7 +16,15 @@
     <!-- Custom styles for this template -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+
+   <!--------- fire base -->
+   <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+   <script src="js/javasc.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+<!--------- fire base -->
   </head>
+
 
   <body id="page-top">
     <!-- Navigation -->
@@ -29,15 +37,21 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li>
-                <a class="nav-link js-scroll-trigger" href="index.html"> My Account </a>
+             <a class="nav-link js-scroll-trigger" href="index.html"> My Account </a>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">About us</a>
+                    <a class="nav-link js-scroll-trigger" href="index.html#services">About us</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                    <a class="nav-link js-scroll-trigger" href="index.html#about">Services</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact">Contact us</a>
+                    <a class="nav-link js-scroll-trigger" href="selectionKids.html">Kids Zone</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="selectionAdults.html">Adults Zone</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="index.html#contact">Contact us</a>
                   </li>
                   <li>
                     <a class="nav-link js-scroll-trigger" href="signup.html"> Sign Up </a>
@@ -57,7 +71,7 @@
 <div style="text-align: center;">
     
     <br><br><br><br><br><br>
-    <h1>What are you in the mood for, ______?
+    <h1 id="name">What are you in the mood for, ______? </h1>
 
         <div class="container py-3">
             <!--Row with two equal columns-->
@@ -96,10 +110,6 @@
 </div>
 
 
-
-
-
-
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
@@ -118,6 +128,22 @@
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
 
+<script>
+
+firebase.auth().onAuthStateChanged(function (user) {
+  if (user) {
+    document.getElementById("name").innerHTML = "What are you in the mood for " + user.displayName + "?"
+      console.log(user.displayName)
+  } else {
+      // No user is signed in.
+  }
+});
+
+</script>
+
+<div class="box">
+  <img src="image/easteregg.png">
+</div>
   </body>
 
 </html>

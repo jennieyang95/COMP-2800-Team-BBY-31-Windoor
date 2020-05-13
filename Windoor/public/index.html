@@ -1,156 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title>Windoor</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-      <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+  <title>Windoor</title>
 
-    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
 
-    <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
-    
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
-    <!-- favicon for Windoor -->
-    <link rel="shortcut icon" type="image/png" href="image/favicon.png">
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
 
-    <script>
-          // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyCw7d1WGvyygchOfHN731FqQfwHUBLtidM",
-        authDomain: "projects-2-88388.firebaseapp.com",
-        databaseURL: "https://projects-2-88388.firebaseio.com",
-        projectId: "projects-2-88388",
-        storageBucket: "projects-2-88388.appspot.com",
-        messagingSenderId: "1055517014926",
-        appId: "1:1055517014926:web:0d36594b9cc92cd51f02df"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-    </script>
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+  <!-- favicon for Windoor -->
+  <link rel="shortcut icon" type="image/png" href="image/favicon.png">
 
-    <!-- Custom styles for this template -->
-    <link href="css/scrolling-nav.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
-  </head>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCw7d1WGvyygchOfHN731FqQfwHUBLtidM",
+      authDomain: "projects-2-88388.firebaseapp.com",
+      databaseURL: "https://projects-2-88388.firebaseio.com",
+      projectId: "projects-2-88388",
+      storageBucket: "projects-2-88388.appspot.com",
+      messagingSenderId: "1055517014926",
+      appId: "1:1055517014926:web:0d36594b9cc92cd51f02df"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
 
-  <body id="page-top">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"> Windoor </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">About us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact us</a>
-            </li>
-            <li>
-              <a class="nav-link js-scroll-trigger" href="signin.html"> Sign In </a>
-            </li>
-          </ul>
-        </div>
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body id="page-top">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"> Windoor </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="selectionKids.html">Kids Zone</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="selectionAdults.html">Adults Zone</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact us</a>
+          </li>
+          <li>
+            <a class="nav-link js-scroll-trigger" href="signin.html"> Sign In </a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <header class="bg-primary text-white">
-      <div class="container text-center">
-        <h1> Welcome to Windoor</h1>
-        <p class="lead"> Perfect place to be fun during quarantine </p>
-      </div>
-    </header>
+  <header class="bg-primary text-white">
+    <div class="container text-center">
+      <h1> Welcome to Windoor</h1>
+      <p class="lead"> Perfect place to be fun during quarantine </p>
+    </div>
+  </header>
 
-    <section id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h2>Services we offer</h2>
-            <p class="lead">
-              Windoor is a web application geared towards the general public to take care of your mental and physical well being. It provides users with features, such as tutorials on creating crafts and at-home workouts, that keep you entertained and during quarantine.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="bg-light">
-      
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Services we offer</h2>
+          <p class="lead">
+            Windoor is a web application geared towards the general public to take care
+            of your mental and physical well being. By creating an account with us,
+            users have access to features that are
+            separated into a kids and adults zone.
             
-            <div class="containerRow">
-              <div class="containerCol">
-                <img src="image/tyler.png" style="width: 100%">
-              </div>
-              <div class="containerCol">
-                <img src="image/susan.png" style="width: 100%">
-              </div>
-              <div class="containerCol">
-                <img src="image/jennie.png" style="width: 100%">
-              </div>
-              <div class="containerCol">
-                <img src="image/jay.png" style="width: 100%">
-              </div>
+            The Kids Zone offers child-friendly activities, such as:
+            <ul>
+            
+            <li>Origami</li>
+            <li>Stretching</li>
+            <li>Exercising</li>
+            <li>Drawing</li>
+              
+
+              The Adults Zone offers diverse activities, such as:
+              
+
+            <li>Anaerobic Exercises</li>
+            <li>Aerobic Exercises</li>
+            <li>Origami</li>
+            <li>Yoga and Meditation</li>
+</ul>
+            Windoor makes sure to keep you
+            entertained and healthy during quarantine.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="bg-light">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+
+          <div class="containerRow">
+            <div class="containerCol">
+              <img src="image/tyler.png" style="width: 100%">
             </div>
-            <h2>About Us</h2>
-            <p class="lead">
-              We are a group of 4 developers consisting of two Term 1 and two Term 2 students who are collaborating to improve the wellbeing of our community during COVID-19. Jennie and JungJae have completed Term 1 and they’re excited to put their knowledge to use. They welcome hands-on projects because it’s a great way to challenge themselves and meet other developers. Tyler and Susan have finished Term 2 and they look forward to working alongside a hardworking and passionate team. Collaborating is what gets us going! We hope our app, Windoor, encourages safe social distancing while taking care of our mental and physical health.
-            </p>
+            <div class="containerCol">
+              <img src="image/susan.png" style="width: 100%">
+            </div>
+            <div class="containerCol">
+              <img src="image/jennie.png" style="width: 100%">
+            </div>
+            <div class="containerCol">
+              <img src="image/JungJae.png" style="width: 100%">
+            </div>
           </div>
+          <h2>About Us</h2>
+          <p class="lead">
+            We are a group of 4 developers consisting of two Term 1 and two Term 2 students who are collaborating to
+            improve the wellbeing of our community during COVID-19. Jennie and JungJae have completed Term 1 and they’re
+            excited to put their knowledge to use. They welcome hands-on projects because it’s a great way to challenge
+            themselves and meet other developers. Tyler and Susan have finished Term 2 and they look forward to working
+            alongside a hardworking and passionate team. Collaborating is what gets us going! We hope our app, Windoor,
+            encourages safe social distancing while taking care of our mental and physical health.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="contact">
-      <img src="image/contact.png" alt="contact us" class="center">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h2>Contact us</h2>
-            <p class="lead">
-              If you have any questions or concerns, please feel free to contact us at windoor@xyz.com!
-            </p>
-          </div>
+  <section id="contact">
+    <img src="image/contact.png" alt="contact us" class="center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Contact us</h2>
+          <p class="lead">
+            If you have any questions or concerns, please feel free to contact us at windoor@xyz.com
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Windoor</p>
-      </div>
-      <!-- /.container -->
-    </footer>
-    
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Windoor</p>
+    </div>
+    <!-- /.container -->
+  </footer>
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom JavaScript for this theme -->
-    <script src="js/scrolling-nav.js"></script>
-  </body>
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+</body>
+
 </html>

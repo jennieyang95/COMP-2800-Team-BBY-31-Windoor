@@ -22,10 +22,10 @@
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="js/javasc.js"></script>
-    <script src="js/activities.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
 <!--------- fire base -->
   </head>
-  <h2 id="activities"> blah</h2>
+
 
 
     
@@ -42,19 +42,25 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li>
-                <a class="nav-link js-scroll-trigger" href="index.html"> My Account </a>
+              <a class="nav-link js-scroll-trigger" href="index.html"> My Account </a>
+              <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="index.html#services">About us</a>
+                </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">About us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact">Contact us</a>
-                  </li>
-                  <li>
-                    <a class="nav-link js-scroll-trigger" href="signup.html"> Sign Up </a>
-                  </li>
+                  <a class="nav-link js-scroll-trigger" href="index.html#about">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="selectionKids.html">Kids Zone</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="selectionAdults.html">Adults Zone</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="index.html#contact">Contact us</a>
+                </li>
+                <li>
+                  <a class="nav-link js-scroll-trigger" href="signup.html"> Sign Up </a>
+                </li>
             </li>
           </ul>
         </div>
@@ -66,7 +72,7 @@
 <div style="text-align: center;">
     
     <br><br><br><br><br><br>
-    <h1>What would you like to improve on, ___?
+    <h1 id="name">What would you like to improve on, ___? </h1>
 
         <div class="container py-3">
             <!--Row with two equal columns-->
@@ -102,7 +108,7 @@
             </div>
         </div>
     
-      </h1>
+      
       <br><br><br><br>
   </div>
 
@@ -150,7 +156,7 @@
     addEventListener("load",function(){
       
       var link = document.getElementsByClassName("instr");
-      for (i = 0; i < 20; i++) {
+      for (i = 0; i < 4; i++) {
       link[i].addEventListener("click",function(e){
           e.preventDefault();
           // do some database stuff
@@ -161,12 +167,18 @@
   }}); 
 
 
-
-
-
-
-
       </script>
+
+<script>
+firebase.auth().onAuthStateChanged(function (user) {
+  if (user) {
+    document.getElementById("name").innerHTML = "What would you like to improve on " + user.displayName + "?"
+      console.log(user.displayName)
+  } else {
+      // No user is signed in.
+  }
+});
+</script>
 
 
 
