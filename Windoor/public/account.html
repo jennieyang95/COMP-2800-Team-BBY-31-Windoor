@@ -83,7 +83,7 @@
     </div>
   </header>
 
-  <section id="about">
+  <section id="about"style="display: block; margin-left: auto; margin-right: auto; width: 95%;">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
@@ -254,8 +254,7 @@
         if (user) {
             document.getElementById("username").innerHTML = "" + user.displayName
             document.getElementById("email").innerHTML = user.email
-            document.getElementByID("score").innerHTML = user.score
-            console.log(user.score)
+            
             console.log(user.displayName)
             console.log(user.email)
         } else {
