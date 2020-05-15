@@ -71,26 +71,39 @@
                 <li>
                   <a class="nav-link js-scroll-trigger" href="signin.html"> Sign in </a>
                 </li>
-                <li>
-                  <a class="nav-link js-scroll-trigger" href="favorite.html"> Favorite </a>
-                </li>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <p id="name"> adsf <p>
-      <button id="namee" style="display: none;"> </button>
-<button style="float: right;" id="favorite" onclick="favunvaf(); asdas()">  Favorite </button>
+    <p id="name">  <p>
+<!------------------------------>
+    
+    <div id="buttons" class="container py-3">
+      <!--Row with two equal columns-->
+      <div class="row">
+       
+          </div>
+          
+          <div class="col-md-4">
+           
+          </div>
 
-    <div class="video-container">
-      <iframe id = "video" width="300px" height="300px" style="display: block; margin-left: auto; margin-right: auto; width: 50%;" 
-      src="https://www.youtube.com/embed/8XkcbdSRdO0"
-      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen></iframe>
-      <br><br>
-    </div>
+      </div>
+  </div>
+<!--------------------------------->
+        
+
+      </div>
+  </div>
+
+   
+      <button id="namee" style="display: none;"> </button>
+
+
+
+    
 
     <div style="text-align: center;"> 
     <p id="description" style="display: block; margin-left: auto; margin-right: auto; width: 80%;"> </p> 
@@ -106,102 +119,138 @@
 
 
 
-
-
- 
-  
-
- 
-   
-
-    
-
-
-
    <script>
 
 var videndes = {};
 
-       function getuserchoice() {
-            db.collection("useractselc").doc("catenact").onSnapshot(
-                function (snap) {
-                   //do something
-                   let usercate = snap.data().category;
-                   let useracti = snap.data().activities;
-                  
-                pullvidndes(usercate, useracti)
-                
-
-               })}
-
-       getuserchoice();
-
-      
-       function pullvidndes(a,b) {
-
-        let activideo = b + "v";
-        let actidescrp = b + "d";
-
-            db.collection("instruction").doc(a).onSnapshot(
-                function (snap) {
-                   //do something
-                   let activid = snap.data()[activideo];
-                   let actidescr = snap.data()[actidescrp];
-                  
-                   document.getElementById("video").src = activid;
-                   document.getElementById("description").innerHTML = actidescr;
-
-               })}
-
-       getuserchoice();
-
-
-
        firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
-    document.getElementById("name").innerHTML = "What would you like to improve on " + user.displayName + "?"
+    document.getElementById("name").innerHTML = "Your personal favorite section " + user.displayName
     document.getElementById("namee").value = user.email  
-   
+    docsize()
+    
   } else {
       // No user is signed in.
   }
 });
 
     
-
-       function favunvaf() {
-
-
-        
-       
-        document.getElementById("favorite").style.color = "Yellow";
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+       function docsize() {
         let email = document.getElementById("namee").value;
+       // document.getElementById("unfavorite").style.color = "Yellow";
         
+console.log(email)
+       
 
-        db.collection("useractselc").doc("catenact").onSnapshot(
-                function (snap) {
-                   
-                   let usercate = snap.data().category;
-                   let useracti = snap.data().activities;
+       db.collection("useraccount").doc(email).collection("favorite").get().then(snapshot => {
+            length = snapshot.size
 
-        db.collection("useraccount").doc(email).collection("favorite").doc(useracti).set({
-  
-          category: usercate,
-          activity: useracti
+          
          
-  
-
-})
-
-})
+        //  createbutton(length)
+        pulldoclistncreatebutton(length)
+}) 
       
 
        }
+    
 
 
+
+function pulldoclistncreatebutton(length) {
+  let email = document.getElementById("namee").value;
+  console.log("test" + email)
+  const events = firebase.firestore().collection('useraccount').doc(email).collection("favorite")
+  events.get().then((querySnapshot) => {
+      const doclist = []
+      querySnapshot.forEach((doc) => {
+         doclist.push({ id: doc.id, ...doc.data() })
+      })
+      console.log(doclist)
+      for(i = 0; i < length; i++) {
+      //console.log(doclist[i].activity)
+     // console.log(doclist[i].category)
+
+      let btn = document.createElement("BUTTON");
       
+      btn.id = doclist[i].activity
+      btn.value = doclist[i].category
+      btn.innerHTML = doclist[i].activity
+      btn.className = "ccc"
+      btn.setAttribute("onclick", "selactivity(this.id); redirect()");
+      
+      document.getElementById("buttons").appendChild(btn);
+
+      let br = document.createElement("p")
+      br.innerHTML = "<br>"
+      document.getElementById("buttons").appendChild(br);
+  
+
+      }
+   })
+ }
+
+ pulldoclistncreatebutton()
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+       function selactivity(clicked_id) {
+           
+
+ 
+
+           let selcatego = document.getElementById(clicked_id).value;   //gets user input
+           let selecteac = document.getElementById(clicked_id).id;
+           console.log(selcatego);
+           console.log(selecteac);
+           db.collection("useractselc").doc("catenact").set({
+               category: selcatego,
+               activities: selecteac
+           })
+          
+  
+       }
+
+
+
+   
+    addEventListener("load",function(){
+      
+      var link = document.getElementsByClassName("instr");
+      for (i = 0; i < 50; i++) {
+      link[i].addEventListener("click",function(e){
+          e.preventDefault();
+          // do some database stuff
+          // after 5 seconds, trigger the link
+          setTimeout(function(){ 
+            window.location.href = "instructionpage.html"; }, 500);
+          }) 
+  }}); 
+
+
+  addEventListener("load",function(){
+      
+      var link = document.getElementsByClassName("ccc");
+      for (i = 0; i < 50; i++) {
+      link[i].addEventListener("click",function(e){
+          e.preventDefault();
+          // do some database stuff
+          // after 5 seconds, trigger the link
+          setTimeout(function(){ 
+            window.location.href = "instructionpage.html"; }, 500);
+          }) 
+  }}); 
+
+
+function redirect() {
+
+  setTimeout(function(){ 
+            window.location.href = "instructionpage.html"; }, 500);
+}
 
 
     </script>
