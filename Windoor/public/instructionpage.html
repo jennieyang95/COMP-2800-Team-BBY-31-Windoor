@@ -125,7 +125,7 @@ var videndes = {};
        function getuserchoice() {
             db.collection("useractselc").doc("catenact").onSnapshot(
                 function (snap) {
-                   //do something
+                   
                    let usercate = snap.data().category;
                    let useracti = snap.data().activities;
                   
@@ -144,7 +144,7 @@ var videndes = {};
 
             db.collection("instruction").doc(a).onSnapshot(
                 function (snap) {
-                   //do something
+              
                    let activid = snap.data()[activideo];
                    let actidescr = snap.data()[actidescrp];
                   
