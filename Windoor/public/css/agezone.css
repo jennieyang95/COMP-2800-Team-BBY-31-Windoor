@@ -55,11 +55,21 @@ body {
 }
 .kidimg {
     color: blue;
-    float: right;
+    /* float: right; */
     width: 60;
     height: 50;
 }
 .leftarrow {
     width: 70;
     height: 50;
+}
+.agezoneContainer {
+    text-align: center;
+    margin-left: 23px;
+}
+#adult {
+    display:  inline-block;
+}
+#kids {
+    margin: 0 auto;
 }

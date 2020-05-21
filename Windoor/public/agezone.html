@@ -16,9 +16,7 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-  
-  
-
+    <link rel="stylesheet" href="css/agezone.css">
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -28,15 +26,13 @@
 
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
-  <!------------------------------------------------------------------------------>
-    <link rel="stylesheet" href="css/agezone.css">
-
-       <!--------- fire base -->
-       <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
-       <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
-       <script src="js/javasc.js"></script>
-       <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
-   <!--------- fire base -->
+    
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+    <script src="js/javasc.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+ <!------------------------------------------------------------------------------------>
 </head>
 
 
@@ -46,7 +42,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark  main-nav" id="mainNav">
         <div class="container">
-          <a class="navbar-brand js-scroll-trigger" href="#page-top"> Windoor </a>
+          <a class="navbar-brand js-scroll-trigger" href="#index.html"> Windoor </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -71,9 +67,36 @@
       </nav>
 
     <header class="main-header"> 
-      <h1 id="age">Select your age group </h1>
+       <h2> <br> Select your age group </h1> 
+        <br>
+        <h4 id="username" style="text-align: center;"> Welcome !</h4>
+        <br>
+        <br>
     </header>
 
+    <div class="agezoneContainer">
+
+      <div class="card text-center mb-3" style="width: 20rem;" id="adult">
+        <div class="card-body">
+          <h5 class="card-title">Adult zone</h5>
+          <img src="image/adultimg.png" class="adultimg" style="width: 50px; height: 50px;"/> <br><br> 
+          <a href="selectionAdults.html" class="btn btn-primary"> Let's explore! </a>
+        </div>
+      </div>
+
+      <div class="card text-center mb-3" style="width: 20rem;" id="kids">
+        <div class="card-body">
+          <h5 class="card-title"> Kids zone </h5>
+          <img src="image/kidimg.png" class="kidimg" style="width: 50px; height: 50px;"/> <br><br>
+          <a href="#" class="btn btn-primary"> Let's explore! </a>
+        </div>
+      </div>
+
+    </div>
+  
+
+
+<!-- 
   <article class="main-article">
     <a href="selectionAdults.html"> <div class="adultzone">
           <h2 class="adultzonetxt"> Adults zone </h2> </a>
@@ -85,9 +108,9 @@
           <h2 class="kidszonetxt"> Kids zone </h2>
           <img src="image/kidimg.png" class="kidimg"> </a>
     </div>
-  </article>
+  </article> -->
 
-  <a href="index.html"> <img src="image/leftarrow.png" class="leftarrow"> </a>
+  <!-- <a href="index.html"> <img src="image/leftarrow.png" class="leftarrow"> </a> -->
 
   <!-- Footer -->
   <footer class="py-1 bg-dark fixed-bottom">
@@ -96,6 +119,16 @@
     </div>
     <!-- /.container -->
   </footer>
+  <script>
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+            document.getElementById("username").innerHTML = "Welcome " + user.displayName + "!"
+            console.log(user.displayName)
+        } else {
+            console.log("no user")
+        }
+    });
+  </script>
       
 </div>
 
