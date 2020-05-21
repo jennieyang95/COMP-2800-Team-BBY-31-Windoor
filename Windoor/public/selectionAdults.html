@@ -36,26 +36,26 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li>
-             <a class="nav-link js-scroll-trigger" href="index.html"> My Account </a>
+           
+
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="account.html">My Account</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="favorite.html">Favorites</a>
+            </li>
+
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="index.html#services">About us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="index.html#about">Services</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="selectionKids.html">Kids Zone</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="selectionAdults.html">Adults Zone</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="index.html#contact">Contact us</a>
-                  </li>
-                  <li>
-                    <a class="nav-link js-scroll-trigger" href="signup.html"> Sign Up </a>
-                  </li>
+                  <a class="nav-link js-scroll-trigger" href="selectionKids.html">Kids Zone</a>
+                </li>
+             
+                <li>
+                  <a class="nav-link js-scroll-trigger" href="index.html" id="signout"> Sign Out </a> <!-- Signout page or something to signal the user that he/she has signed out -->
+                </li>
+
+
+
             </li>
           </ul>
         </div>
@@ -144,6 +144,9 @@ firebase.auth().onAuthStateChanged(function (user) {
 <div class="box">
   <img src="image/easteregg.png">
 </div>
+
+<script src="js/signout.js"></script>
+
   </body>
 
 </html>
