@@ -86,7 +86,7 @@
 
     <div class="video-container">
       <iframe id = "video" width="300px" height="300px" style="display: block; margin-left: auto; margin-right: auto; width: 50%;" 
-      src="https://www.youtube.com/embed/8XkcbdSRdO0"
+      src="https://www.youtube.com/embed/Gu3INrCf0ic"
       frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
       allowfullscreen></iframe>
       <br><br>
@@ -159,7 +159,7 @@ var videndes = {};
 
        firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
-    document.getElementById("name").innerHTML = "What would you like to improve on " + user.displayName + "?"
+    document.getElementById("name").innerHTML = user.displayName
     document.getElementById("namee").value = user.email  
    
   } else {

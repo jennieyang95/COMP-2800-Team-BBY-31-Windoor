@@ -30,6 +30,13 @@
     <script src="js/scrolling-nav.js"></script>
   <!------------------------------------------------------------------------------>
     <link rel="stylesheet" href="css/agezone.css">
+
+       <!--------- fire base -->
+       <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+       <script src="js/javasc.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+   <!--------- fire base -->
 </head>
 
 
@@ -63,7 +70,7 @@
       </nav>
 
     <header class="main-header"> 
-       <h2> <br> Select your age group </h1> 
+      <h1 id="age">Select your age group </h1>
     </header>
 
   <article class="main-article">
@@ -91,5 +98,16 @@
       
 </div>
 
+
+<script>
+  firebase.auth().onAuthStateChanged(function (user) {
+  if (user) {
+  document.getElementById("age").innerHTML = "Select your age group " + user.displayName
+   console.log(user.displayName)
+  } else {
+   // No user is signed in.
+  }
+  });
+  </script>
 </body>
 </html>

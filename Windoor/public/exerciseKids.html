@@ -70,7 +70,7 @@
 <div style="text-align: center;">
     
     <br><br><br><br><br><br>
-    <h1>Choose your pick!
+    <h1 id="name">Choose your pick</h1>
 
       <div class="container py-3">
         <!--Row with two equal columns-->
@@ -172,15 +172,15 @@
    </script>
   
   <script>
-  firebase.auth().onAuthStateChanged(function (user) {
-  if (user) {
-  document.getElementById("name").innerHTML = "What are you in the mood for today, " + user.displayName + "?"
-   console.log(user.displayName)
-  } else {
-   // No user is signed in.
-  }
-  });
-  </script>
+    firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+    document.getElementById("name").innerHTML = "Choose your pick, " + user.displayName + "!"
+     console.log(user.displayName)
+    } else {
+     // No user is signed in.
+    }
+    });
+    </script>
   
     </body>
   
