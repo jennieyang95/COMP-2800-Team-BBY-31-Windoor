@@ -1,0 +1,12 @@
+
+.favoritebtn {
+  background-color: #f4511e;
+  border: none;
+  transition: 0.2s;
+  color: white;
+  padding: 14px 28px;
+  text-align: center;
+  font-size: 17px;
+}
+
+.favoritebtn:hover {opacity: 0.5}

@@ -65,7 +65,9 @@ body {
 }
 .agezoneContainer {
     text-align: center;
-    margin-left: 23px;
+    justify-self: center;
+    margin-top: 200px;
+    position: absolute;
 }
 #adult {
     display:  inline-block;

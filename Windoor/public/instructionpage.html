@@ -79,8 +79,8 @@
       </div>
     </nav>
 
-    <p id="name"> adsf <p>
-      <button id="namee" style="display: none;"> </button>
+    <p id="name">  <p>
+      <button id="useremail" style="display: none;"> </button>
 <button style="float: right;" id="favorite" onclick="favunvaf(); asdas()">  Favorite </button>
 
     <div class="video-container">
@@ -165,7 +165,7 @@ var videndes = {};
        firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     document.getElementById("name").innerHTML = user.displayName
-    document.getElementById("namee").value = user.email  
+    document.getElementById("useremail").value = user.email  
    
   } else {
       // No user is signed in.
@@ -180,7 +180,7 @@ var videndes = {};
         
        
         document.getElementById("favorite").style.color = "Yellow";
-        let email = document.getElementById("namee").value;
+        let email = document.getElementById("useremail").value;
         
 
         db.collection("useractselc").doc("catenact").onSnapshot(
