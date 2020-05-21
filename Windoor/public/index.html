@@ -58,7 +58,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">Services</a>
+            <a class="nav-link js-scroll-trigger" href="favorite.html">Favorites</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="selectionKids.html">Kids Zone</a>
@@ -66,12 +66,7 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="selectionAdults.html">Adults Zone</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">About us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact us</a>
-          </li>
+         
           <li>
             <a class="nav-link js-scroll-trigger" href="signin.html"> Sign In </a>
           </li>
@@ -80,8 +75,15 @@
     </div>
   </nav>
 
+
+  <br><br><br>
+  <h1 id="name" style= "font-size: 20px;">. </h1>
+
+
   <header class="bg-primary text-white">
     <div class="container text-center">
+
+
       <h1> Welcome to Windoor</h1>
       <p class="lead"> Perfect place to be fun during quarantine </p>
     </div>
@@ -188,6 +190,17 @@
 
   <!-- Custom JavaScript for this theme -->
   <script src="js/scrolling-nav.js"></script>
+
+  <script>
+    firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+    document.getElementById("name").innerHTML = user.displayName
+     console.log(user.displayName)
+    } else {
+     // No user is signed in.
+    }
+    });
+    </script>
 </body>
 
 </html>
