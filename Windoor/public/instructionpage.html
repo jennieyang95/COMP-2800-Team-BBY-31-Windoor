@@ -164,7 +164,7 @@ var videndes = {};
 
        firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
-    document.getElementById("name").innerHTML = user.displayName
+    document.getElementById("name").innerHTML = "Hello " + user.displayName
     document.getElementById("useremail").value = user.email  
    
   } else {
