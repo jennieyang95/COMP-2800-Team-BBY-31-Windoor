@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Feature Selection - Adults</title>
+    <title>Stretch - Kids</title>
 
     <!-- favicon for Windoor -->
     <link rel="shortcut icon" type="image/png" href="image/favicon.png">
@@ -16,6 +16,13 @@
     <!-- Custom styles for this template -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+
+     <!--------- fire base -->
+     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+     <script src="js/javasc.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+ <!--------- fire base -->
   </head>
 
   <body id="page-top">
@@ -63,7 +70,7 @@
 <div style="text-align: center;">
     
     <br><br><br><br><br><br>
-    <h1>What are you in the mood for, ______?
+    <h1 id="name">Choose your pick</h1>
 
         <div class="container py-3">
             <!--Row with two equal columns-->
@@ -85,7 +92,7 @@
             <!--Row with two equal columns-->
             <div class="row py-2">
                 <div class="col-md-4">
-                    <a href = "jayinstructions.html"><img src="image/stretchLegs.jpeg" class="rounded-circle img-fluid"></a>
+                    <a href = "jayinstructions.html"><img src="image/stretchLegs.jpg" class="rounded-circle img-fluid"></a>
                     Legs
                 </div>
     
@@ -124,6 +131,18 @@
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
 
+
+
+    <script>
+      firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+      document.getElementById("name").innerHTML = "Choose your pick, " + user.displayName + "!"
+       console.log(user.displayName)
+      } else {
+       // No user is signed in.
+      }
+      });
+      </script>
   </body>
 
 </html>

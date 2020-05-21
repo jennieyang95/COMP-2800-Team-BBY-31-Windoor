@@ -125,5 +125,16 @@
       
 </div>
 
+
+<script>
+  firebase.auth().onAuthStateChanged(function (user) {
+  if (user) {
+  document.getElementById("age").innerHTML = "Select your age group " + user.displayName
+   console.log(user.displayName)
+  } else {
+   // No user is signed in.
+  }
+  });
+  </script>
 </body>
 </html>
