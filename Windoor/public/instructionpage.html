@@ -16,6 +16,7 @@
     <!--  CSS - Custom styles for this template -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/instruction.css">
    
     <!-- JS -->
     
@@ -79,12 +80,12 @@
       </div>
     </nav>
 
-    <p id="name">  <p>
+    <h3 id="name" style="text-align: center;">  </h3>
       <button id="useremail" style="display: none;"> </button>
-<button style="float: right;" id="favorite" onclick="favunvaf(); asdas()">  Favorite </button>
+<button style="float: right;" class= "favoritebtn" id="favorite" onclick="favunvaf();">  Favorite </button>
 
     <div class="video-container">
-      <iframe id = "video" width="300px" height="300px" style="display: block; margin-left: auto; margin-right: auto; width: 50%;" 
+      <iframe id = "video" width="300px" height="300px" style="display: block;  margin-left: 23.4375rem; width: 50%;" 
       src="https://www.youtube.com/embed/Gu3INrCf0ic"
       frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
       allowfullscreen></iframe>
@@ -92,17 +93,17 @@
     </div>
 
     <div>
-      <p id="scoreBoard"> 0 </p>
+      <p style="display: none;" id="scoreBoard"> 0 </p>
       <button id="scoreHide" style="display: none;"> </button>
-      <input class="btn btn-primary" type="button" value="Click me" id="increment" onclick="addOne()">
+      <input style="display: none;" class="btn btn-primary" type="button" value="Click me" id="increment" onclick="addOne()">
     </div>
     
     <div style="text-align: center;"> 
-    <p id="description" style="display: block; margin-left: auto; margin-right: auto; width: 80%;"> </p> 
+      <p id="description"style="display: block; margin-left: auto; margin-right: auto; width: 80%; border-style:groove; border-color:orange">
     </div>
 
   <!-- Footer -->
-  <footer class="py-1 bg-dark fixed-bottom">
+  <footer class="-1 fixed-bottom" style="background-color: orange;">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Windoor</p>
     </div>
@@ -164,7 +165,7 @@ var videndes = {};
 
        firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
-    document.getElementById("name").innerHTML = user.displayName
+    document.getElementById("name").innerHTML = "Enjoy " + user.displayName + "!"
     document.getElementById("useremail").value = user.email  
    
   } else {
