@@ -18,7 +18,42 @@
 ## Links
 ### GitHub
 > https://github.com/jennieyang95/COMP-2800-Team-BBY-31-Windoor
+>
 ## File Directory
+> 
+<details>
+    <summary> Windoor </summary>
+    <details>
+        <summary> .firebase </summary>
+        <p> firebase hosting cache </p>
+    </details>
+    <details>
+        <summary> public</summary>
+        <p> All files & directories to be fetched to user request  </p>    
+        <details>
+            <summary> fonts </summary>
+            <p> fonts used for the project </p>
+        </details>
+        <details>
+            <summary> image </summary>
+            <p> images used for project </p>
+        </details>
+        <details>
+            <summary> js </summary>
+            <p> javascript functions </p>
+        </details>
+        <details>
+            <summary> vendor </summary>
+            <p> 3rd Party API libraries </p>
+        </details>
+        <summary> HTMl documents for project visuals. </summary>
+    </details>
+    <details>
+        <summary> README.md </summary>
+        <p> Windoor guidelines, and usage </p>
+    </details>
+</details>
+
 > public
  > css: styles for the HTML pages
  > fonts: fonts to be used
