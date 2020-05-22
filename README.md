@@ -20,17 +20,23 @@
 > https://github.com/jennieyang95/COMP-2800-Team-BBY-31-Windoor
 >
 ## File Directory
-> Windoor
-    * .firebase
-    * public
-        * css: styles for the HTML pages
-        * fonts: fonts used
-        * image: images used
-        * js: javascript source code
-        * vendor: Bootstrap and other 3rd party libraries
-        * HTML files: HTML files for project visuals and template
-> Readme.md: Information about Windoor
-> test.txt
+> 
+<ul> Windoor
+    <li>.firebase: firebase hosting cache files</li>
+    <li> public: directory to be used during deploying the web page
+        <ul>
+            <li> css: styles for the HTML pages </li>
+            <li> fonts: fonts used </li>
+            <li> image: images used </li>
+            <li> js: javascript source code </li>
+            <li> vendor: Bootstrap and other 3rd party libraries </li>
+            <li> HTML files: HTML files for project visuals and template </li>
+        </ul>
+    </li>
+    <li> Readme.md: Information about Windoor </li>
+    <li> test.txt </li>
+</ul>
+
 ## To use Windoor source code
 1. What do I need in order to view and edit the source code?
   > You will need to install node.js, and firebase via npm intall command
