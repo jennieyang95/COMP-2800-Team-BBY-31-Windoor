@@ -50,6 +50,7 @@
    <li> $ npm install --save firebase </li>
   </ol>
 </details>
+<br>
 5. Is there any further information for me to know to run Windoor?
   > There are no specific passwords to the database.
 6. Testing plan link for Windoor
