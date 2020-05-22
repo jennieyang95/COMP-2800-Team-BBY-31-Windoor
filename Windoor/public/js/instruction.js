@@ -1,5 +1,23 @@
 var videndes = {};
 
+
+   function selactivity(clicked_id) {
+             
+  
+   
+  
+        let selcatego = document.getElementById(clicked_id).value;   //gets user input
+        let selecteac = document.getElementById(clicked_id).id;
+        console.log(selcatego);
+        console.log(selecteac);
+        db.collection("useractselc").doc("catenact").set({
+            category: selcatego,
+            activities: selecteac
+        })
+       
+  
+    }
+
        function getuserchoice() {
             db.collection("useractselc").doc("catenact").onSnapshot(
                 function (snap) {

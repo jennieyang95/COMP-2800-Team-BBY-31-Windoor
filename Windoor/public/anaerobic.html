@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+
+    <!-------- JS -->
+<script src="js/activities.js"></script>
+
     <!-- favicon for Windoor -->
     <link rel="shortcut icon" type="image/png" href="image/favicon.png">
 
@@ -24,6 +28,8 @@
     <script src="js/javasc.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
 <!--------- fire base -->
+
+
   </head>
 
 
@@ -128,55 +134,17 @@
 
   <!-- Custom JavaScript for this theme -->
   <script src="js/scrolling-nav.js"></script>
-    <script type="text/javascript">
-    
-
-
-    function selactivity(clicked_id) {
-           
-
  
-
-           let selcatego = document.getElementById(clicked_id).value;   //gets user input
-           let selecteac = document.getElementById(clicked_id).id;
-           console.log(selcatego);
-           console.log(selecteac);
-           db.collection("useractselc").doc("catenact").set({
-               category: selcatego,
-               activities: selecteac
-           })
-          
-  
-       }
-
-
-
-   
-    addEventListener("load",function(){
-      
-      var link = document.getElementsByClassName("instr");
-      for (i = 0; i < 4; i++) {
-      link[i].addEventListener("click",function(e){
-          e.preventDefault();
-         
-        // after 0.5 seconds, relocate user to the link
-          setTimeout(function(){ 
-            window.location.href = "instructionpage.html"; }, 500);
-          }) 
-  }}); 
-
-
-      </script>
 
 <script>
 firebase.auth().onAuthStateChanged(function (user) {
-  if (user) {
-    document.getElementById("name").innerHTML = "What would you like to improve on " + user.displayName + "?"
-      console.log(user.displayName)
-  } else {
-      // No user is signed in.
-  }
-});
+    if (user) {
+      document.getElementById("name").innerHTML = "What would you like to improve on " + user.displayName + "?"
+        console.log(user.displayName)
+    } else {
+        // No user is signed in.
+    }
+  });
 </script>
 
 <script src="js/signout.js"></script>
