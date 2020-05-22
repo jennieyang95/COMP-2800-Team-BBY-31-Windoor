@@ -81,11 +81,12 @@
     </nav>
 
     <h3 id="name" style="text-align: center;">  </h3>
-      <button id="useremail" style="display: none;"> </button>
+ 
+      <button id="useremail"> </button>
 
 
-    <div class="video-container" style="text-align: center;">
-      <iframe id = "video" width="300px" height="300px" style=" margin-left: auto; margin-right: auto; width: 90%;" 
+    <div class="video-container" >
+      <iframe id = "video" width="300px" height="300px" 
       src="https://www.youtube.com/embed/Gu3INrCf0ic"
       frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
       allowfullscreen></iframe>
@@ -93,117 +94,21 @@
       
     </div>
     
-    <div style="display: flex; align-items: center; justify-content: center;">
+    <div class = "buttonanddescriptioncontainer" >
       <button class= "favoritebtn" id="favorite" onclick="favunvaf();">  Favorite </button>
     </div>
     <br>
-    <div style="text-align: center;"> 
-      <p id="description"style="display: block; margin-left: auto; margin-right: auto; width: 80%; border-style:groove; border-color:orange">
-    </div>
-    <div style="height: 100px;"></div>
+
+      <p id="description">
+  
+    <div class="betweendesandfooter"></div>
   <!-- Footer -->
-  <footer class="-1 fixed-bottom" style="background-color: orange;">
+  <footer class="-1 fixed-bottom footer">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Windoor</p>
     </div>
     <!-- /.container -->
   </footer>
-
-
-
-
-
- 
-  
-
- 
-   
-
-    
-
-
-
-   <script>
-
-var videndes = {};
-
-       function getuserchoice() {
-            db.collection("useractselc").doc("catenact").onSnapshot(
-                function (snap) {
-                   
-                   let usercate = snap.data().category;
-                   let useracti = snap.data().activities;
-                  
-                pullvidndes(usercate, useracti)
-                
-
-               })}
-
-       getuserchoice();
-
-      
-       function pullvidndes(a,b) {
-
-        let activideo = b + "v";
-        let actidescrp = b + "d";
-
-            db.collection("instruction").doc(a).onSnapshot(
-                function (snap) {
-              
-                   let activid = snap.data()[activideo];
-                   let actidescr = snap.data()[actidescrp];
-                  
-                   document.getElementById("video").src = activid;
-                   document.getElementById("description").innerHTML = actidescr;
-
-               })}
-
-       getuserchoice();
-
-
-
-       firebase.auth().onAuthStateChanged(function (user) {
-  if (user) {
-    document.getElementById("name").innerHTML = "Enjoy " + user.displayName + "!"
-    document.getElementById("useremail").value = user.email  
-   
-  } else {
-      // No user is signed in.
-  }
-});
-
-    
-
-       function favunvaf() {
-
-
-        
-       
-        document.getElementById("favorite").style.color = "Yellow";
-        let email = document.getElementById("useremail").value;
-        
-
-        db.collection("useractselc").doc("catenact").onSnapshot(
-                function (snap) {
-                   
-                   let usercate = snap.data().category;
-                   let useracti = snap.data().activities;
-
-        db.collection("useraccount").doc(email).collection("favorite").doc(useracti).set({
-  
-          category: usercate,
-          activity: useracti
-         
-  
-
-        })
-
-        })
-      
-
-       }
-    </script>
-
 
 
 

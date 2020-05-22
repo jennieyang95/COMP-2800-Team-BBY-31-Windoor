@@ -24,3 +24,37 @@ width: 150px;
 height: 60px;
 
   }
+
+  #description {
+
+    display: block; margin-left: auto; margin-right: auto; width: 80%; border-style:groove; border-color:orange;
+    text-align: center;
+  }
+
+  #video{
+     margin-left: auto; margin-right: auto; width: 90%; 
+    
+  }
+
+  .footer {
+   background-color: orange;
+  }
+
+  #useremail {
+    display: none;
+  }
+
+  .video-container {
+    text-align: center;
+  }
+
+  .buttonanddescriptioncontainer {
+
+display: flex; align-items: center; justify-content: center;
+
+  }
+
+  .betweendesandfooter{
+
+   height: 100px;
+  }
