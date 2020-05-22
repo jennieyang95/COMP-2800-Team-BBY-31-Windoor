@@ -14,7 +14,35 @@
 * Basic JavaScript
 * HTML5
 * CSS3
+* 3rd Party API: Google login authentication
 ## Links
 ### GitHub
 > https://github.com/jennieyang95/COMP-2800-Team-BBY-31-Windoor
 ## File Directory
+> public
+ > css: styles for the HTML pages
+ > fonts: fonts to be used
+ > js: javascript codes
+ > vendor: Bootstrap and other 3rd party libraries
+ > HTML files: HTML files for project visuals
+## To use Windoor source code
+1. What do I need in order to view and edit the source code?
+  > You will need to install node.js, and firebase via npm intall command
+  > Download Visual Studio Code (or any IDE equivalent e.g. Brackets, Atom, Notepad++)
+2. Are there any 3rd party APIs and frameworks that I need to install?
+  > As mentioned above, install node.js and firebase via npm intall commmand.
+  > Google API is used but the firebase API provides with default Google login option.
+3. Do I need any API keys?
+  > No API keys are required.
+4. Is there a specific order for me to install things?
+  > Make sure to install Node.js first since npm is a package manager provided by Node.
+    > Node.js installation
+      - Go to https://nodejs.org/en/download/ to install the executable to download it on local.
+      - for any help, go to https://phoenixnap.com/kb/install-node-js-npm-on-windows
+    > Firebase installation
+      1. $ npm init
+      2. $ npm install --save firebase
+5. Is there any further information for me to know to run Windoor?
+  > There are no specific passwords to the database.
+6. Testing plan link for Windoor
+  > https://docs.google.com/spreadsheets/d/1B49-8S1F7NqHilcm6j8V2UePEQ64j1YN6AF-sxTY7no/edit#gid=0
