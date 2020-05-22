@@ -20,7 +20,7 @@
 > https://github.com/jennieyang95/COMP-2800-Team-BBY-31-Windoor
 
 ## File Directory
-> <ul>
+<ul>
   <li> Windoor </li>
   <ul>
     <li>.firebase: firebase hosting cache files</li>
