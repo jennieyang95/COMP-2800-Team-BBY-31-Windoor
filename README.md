@@ -20,8 +20,9 @@
 > https://github.com/jennieyang95/COMP-2800-Team-BBY-31-Windoor
 >
 ## File Directory
-> 
-<ul> Windoor
+<ul>
+  <li> Windoor </li>
+  <ul>
     <li>.firebase: firebase hosting cache files</li>
     <li> public: directory to be used during deploying the web page
         <ul>
@@ -35,6 +36,7 @@
     </li>
     <li> Readme.md: Information about Windoor </li>
     <li> test.txt </li>
+  </ul>
 </ul>
 
 ## To use Windoor source code
