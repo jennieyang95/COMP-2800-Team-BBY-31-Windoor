@@ -52,6 +52,6 @@
 </details>
 <br>
 5. Is there any further information for me to know to run Windoor?
-  > There are no specific passwords to the database.
+> There are no specific passwords to the database.
 6. Testing plan link for Windoor
-  > https://docs.google.com/spreadsheets/d/1B49-8S1F7NqHilcm6j8V2UePEQ64j1YN6AF-sxTY7no/edit#gid=0
+> https://docs.google.com/spreadsheets/d/1B49-8S1F7NqHilcm6j8V2UePEQ64j1YN6AF-sxTY7no/edit#gid=0
