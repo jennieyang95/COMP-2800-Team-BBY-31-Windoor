@@ -1,0 +1,26 @@
+
+  .favoritebtn:hover {opacity: 0.5}
+
+
+
+  
+
+
+      
+  .favoritebtn {
+    grid-area: favbtn;
+    background-color: #f4511e;
+    border: none;
+    transition: 0.2s;
+    color: white;
+    justify-self: right;
+
+
+    font-size: 17px;
+ 
+
+
+width: 150px;
+height: 60px;
+
+  }
