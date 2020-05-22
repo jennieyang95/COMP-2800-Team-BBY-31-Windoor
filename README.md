@@ -36,12 +36,12 @@
   > No API keys are required.
 4. Is there a specific order for me to install things?
   > Make sure to install Node.js first since npm is a package manager provided by Node.
-    > Node.js installation
-      - Go to https://nodejs.org/en/download/ to install the executable to download it on local.
-      - for any help, go to https://phoenixnap.com/kb/install-node-js-npm-on-windows
-    > Firebase installation
-      1. $ npm init
-      2. $ npm install --save firebase
+  1. Node.js Installation
+   * Go to https://nodejs.org/en/download/ to install the executable to download it on local.
+   * for any help, go to https://phoenixnap.com/kb/install-node-js-npm-on-windows
+  2. Firebase installation
+   1. $ npm init
+   2. $ npm install --save firebase
 5. Is there any further information for me to know to run Windoor?
   > There are no specific passwords to the database.
 6. Testing plan link for Windoor
